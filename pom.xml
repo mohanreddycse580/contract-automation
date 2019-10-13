@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.contractautomation</groupId>
-	<artifactId>contractautomation</artifactId>
+	<artifactId>contract-automation</artifactId>
 	<version>0.1</version>
-	<name>contractautomation</name>
+	<name>contract-automation</name>
 	<description>Contract End Date Mail trigger  Automation</description>
 
 	<properties>
