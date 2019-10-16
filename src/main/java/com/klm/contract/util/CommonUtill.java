@@ -28,7 +28,7 @@ public class CommonUtill {
 	String filePath;
 
 	public void LoadContractDetails() throws Exception {
-		File inputfile = new File("./" + filePath);
+		File inputfile = new File(filePath);
 		try (FileInputStream file = new FileInputStream(inputfile); 
 				HSSFWorkbook workbook = new HSSFWorkbook(file);) {
 			HSSFSheet sheet = workbook.getSheet("Contract_Report");
