@@ -28,8 +28,8 @@ public class CommonUtill {
 	String filePath;
 
 	public void LoadContractDetails() throws Exception {
-		File inputfile = new File(filePath);
-		try (FileInputStream file = new FileInputStream(inputfile); 
+
+		try (FileInputStream file = new FileInputStream(new File(filePath));
 				HSSFWorkbook workbook = new HSSFWorkbook(file);) {
 			HSSFSheet sheet = workbook.getSheet("Contract_Report");
 			Iterator<Row> rowIterator = sheet.iterator();
