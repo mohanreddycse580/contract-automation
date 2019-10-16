@@ -18,9 +18,8 @@ public class ContractController {
 	// @Scheduled(cron = "${cronExpression}")
 	@RequestMapping("/contractExpiredTrigger")
 	public String triggerContractExpired() throws Exception {
-
 		contractService.loadContractDetails();
-		return "success at " + LocalDateTime.now().toString();
+		return "Successfully Completed Job at " + LocalDateTime.now().toString();
 	}
 
 }

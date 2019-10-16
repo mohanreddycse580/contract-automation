@@ -16,6 +16,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Row;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.klm.contract.pojo.Contract;
@@ -23,9 +24,12 @@ import com.klm.contract.pojo.Contract;
 @Component
 public class CommonUtill {
 
+	@Value("${filePath}")
+	String filePath;
+
 	public void LoadContractDetails() throws Exception {
-		String inPath = "D:\\\\priyatham\\\\ProjectWork1\\\\Contract_Report.xls";
-		try (FileInputStream file = new FileInputStream(new File(inPath));
+		File inputfile = new File("./" + filePath);
+		try (FileInputStream file = new FileInputStream(inputfile); 
 				HSSFWorkbook workbook = new HSSFWorkbook(file);) {
 			HSSFSheet sheet = workbook.getSheet("Contract_Report");
 			Iterator<Row> rowIterator = sheet.iterator();

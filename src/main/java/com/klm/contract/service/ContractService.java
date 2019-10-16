@@ -13,7 +13,6 @@ public class ContractService {
 
 	public void loadContractDetails() throws Exception{
 		commonUtill.LoadContractDetails();
-		
 	}
 
 }
